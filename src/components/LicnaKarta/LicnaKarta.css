@@ -1,0 +1,49 @@
+.LicnaKarta {
+  display: flex;
+
+  padding: 10px;
+
+  background-color: rgb(250, 250, 250);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.4s;
+}
+
+.LicnaKarta:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.LicnaKarta:hover img {
+  transform: scale(1.05);
+}
+
+.LicnaKarta td,
+.LicnaKarta th {
+  padding: 5px 10px;
+}
+
+.LicnaKarta .image-container {
+  height: 200px;
+  width: 150px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.LicnaKarta img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+  transition: transform 0.4s;
+}
+
+.LicnaKarta .text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+
+.LicnaKarta .text-field span {
+  display: block;
+}

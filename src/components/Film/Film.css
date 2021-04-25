@@ -1,0 +1,78 @@
+.Film.card {
+  position: relative;
+  perspective: 2000px;
+  -moz-perspective: 2000px;
+
+  height: 360px;
+  width: 250px;
+
+  border-radius: 5px;
+}
+
+.Film .card__side {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgb(250, 250, 250);
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+
+  height: 100%;
+  width: 100%;
+
+  transition: all 0.8s ease-in-out;
+  backface-visibility: hidden;
+}
+
+.Film .card__side--front {
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 8px solid transparent;
+}
+
+.Film .card__side--back {
+  background-color: rgb(255, 255, 255);
+  color: rgb(51, 51, 51);
+  padding: 0 10%;
+  box-sizing: border-box;
+
+  transform: rotateY(180deg);
+  z-index: -1;
+}
+
+.Film.card:hover .card__side--front {
+  transform: rotateY(180deg);
+}
+
+.Film.card:hover .card__side--back {
+  transform: rotateY(360deg);
+  overflow: hidden;
+}
+
+.Film.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Film .text-container {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Film .text-field {
+  text-align: center;
+}
+
+.Film .text-container span {
+  display: block;
+}

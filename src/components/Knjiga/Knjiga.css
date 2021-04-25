@@ -1,0 +1,54 @@
+.Knjiga {
+  position: relative;
+
+  height: 350px;
+  width: 250px;
+
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+
+  overflow: hidden;
+}
+
+.Knjiga img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Knjiga .text-container {
+  box-sizing: border-box;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+
+.Knjiga .text-container:hover {
+  opacity: 1;
+}
+
+.Knjiga .text-field {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.Knjiga .text-field span {
+  display: block;
+}
